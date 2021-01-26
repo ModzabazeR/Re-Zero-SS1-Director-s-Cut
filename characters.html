@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="keywords" content="リゼロ,Re:ゼロ,りぜろ,MF文庫J,死に戻り,ループ,長月達平,ライトノベル,小説家になろう,TVアニメ" />
+    <meta name="description"
+        content="2016年に国内外で大ヒットしたTVアニメ『Re:ゼロから始める異世界生活』が新たに新編集版として2020年1月1日より1時間番組放送開始！第2期、2020年7月より放送決定！" />
+    <title>ตัวละคร</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon/icon -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://re-zero-anime.jp/tv/apple-touch-icon-180x180.png">
+    <!-- css/js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/lib/bootstrap.min.css">
+    <script type="text/javascript" src="http://re-zero-anime.jp/tv/lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/lib/animate.css" />
+    <script type="text/javascript" src="http://re-zero-anime.jp/tv/lib/colorbox/jquery.colorbox-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/lib/colorbox/colorbox.css" media="all" />
+    <script type="text/javascript" src="http://re-zero-anime.jp/tv/lib/slick/slick.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/lib/slick/slick-theme.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp.min.css">
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/css/common.css?up=1227" />
+    <link rel="stylesheet" type="text/css" href="http://re-zero-anime.jp/tv/css/style.css?up=0924" />
+    <script type="text/javascript" src="http://re-zero-anime.jp/tv/js/common.js?up=1227"></script>
+    <script type="text/javascript" src="http://re-zero-anime.jp/tv/js/sub.js?up=1227"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-65265768-1');
+</script>
+<script>
+    const ww = window.innerWidth;
+    var max_chara = 0;
+    var crt_chara = 1;
+    $(document).ready(function () {
+        max_chara = $('#CharaData .character-block').length;
+        //console.log( "max_chara=" + max_chara);
+        chgChara(1);
+    });
+    function chgChara(num) {
+        crt_chara = num;
+        $('body').attr('data-chara', num);
+        //navi
+        $('#CharaNavi ul li').removeClass("crt");
+        $('#CharaNavi ul li.cn' + num).addClass("crt");
+        //for sp
+        var offset_nv = $('#CharaNavi ul li.crt').position().left;
+        var w_nv = $('#CharaNavi ul li.crt').outerWidth();
+        var scrl_nv = (ww / 2) - (w_nv / 2) - offset_nv;
+        $('#CharaNavi ul').animate({ scrollLeft: scrl_nv * -1 }, 500);
+        //console.log( offset_nv + "/" +  w_nv + "/" +  scrl_nv);
+        //data
+        $('#CharaData .character-block').removeClass("crt");
+        $('#Background .background-character-line').removeClass("on");
+        $('#CharaData .character-block').offsetWidth = $('#CharaData .character-block').offsetWidth;
+        $('#Background .background-character-line').offsetWidth = $('#Background .background-character-line').offsetWidth;
+        setTimeout(function () {
+            $('#CharaData #C' + num).addClass("crt");
+            $('#Background .background-character-line').addClass("on");
+        }, 500);
+    }
+</script>
+<style>
+</style>
+
+<body id="Page_Character" class="sub-page " data-chara="1" style="font-family: 'Kanit', san-serif;">
+    <div id="Background" class="part-background lo-part">
+        <div class="background-line-a">
+            <div></div>
+        </div>
+        <div class="background-line-b">
+            <div></div>
+        </div>
+        <div class="background-texture"></div>
+        <div class="background-images-f"></div>
+        <div class="background-images-n"></div>
+        <div class="background-imtp">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="layout-grid">
+            <div class="max-width"></div>
+            <div class="center"></div>
+        </div>
+        <div class="background-character-line">
+            <div></div>
+        </div>
+    </div><!-- /.part-background -->
+    <header class="part-header lo-part">
+        <div class="cont-global-header lo-cont">
+            <div class="logo"><a href="index.html"><img src="http://re-zero-anime.jp/tv/images/header-logo.png"
+                        alt="Re:ゼロから始める異世界生活"></a></div>
+        </div><!-- /.cont-global-header -->
+        <div class="cont-global-navi lo-cont">
+            <nav class="global-navi">
+                <ul>
+                    <li class=""><a href="index.html"><span>หน้าหลัก</span></a></li>
+                    <li class=""><a href="about.html"><span>เรื่องย่อ/รีวิว</span></a></li>
+                    <li class="crt"><a href="#"><span>ตัวละคร</span></a></li>
+                </ul>
+            </nav>
+        </div><!-- /.cont-global-navi -->
+        <div class="cont-sp-btn lo-cont">
+            <div class="sp-navi-open on"><a href="javascript:spMenuOpen();"><img
+                        src="http://re-zero-anime.jp/tv/images/navi-sp-open.png" alt="OPEN"></a></div>
+            <div class="sp-navi-close off"><a href="javascript:spMenuClose();"><img
+                        src="http://re-zero-anime.jp/tv/images/navi-sp-close.png" alt="CLOSE"></a></div>
+        </div><!-- /.cont-sp-btn -->
+    </header><!-- /.part-header -->
+    <div class="part-body lo-part">
+        <div class="part-body-upper lo-part">
+            <div class="cont-sub-page-label lo-cont">
+                <h2 class="sub-page-label">
+                    <p class="label-en"><span><img src="http://re-zero-anime.jp/tv/images/character-pagelabel.png"
+                                alt="CHARACTER"></span></p>
+                </h2>
+            </div><!-- /.cont-sub-page-title -->
+        </div><!-- /.part-body-upper-->
+        <div class="part-body-middle lo-part">
+
+            <aside class="cont-sub-navi lo-cont">
+                <div class="sub-navi-label"><span>CHARACTER MENU</span></div>
+                <nav id="CharaNavi" class="character-navi">
+                    <ul>
+                        <li class="cn1 crt"><a href="javascript:chgChara(1);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/1.png"
+                                        alt="ナツキ・スバル"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/1.png"
+                                    alt="王戦・エミリア陣営"></span></li>
+                        <li class="cn2"><a href="javascript:chgChara(2);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/2.png" alt="エミリア"></span></a>
+                        </li>
+                        <li class="cn3"><a href="javascript:chgChara(3);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/3.png" alt="パック"></span></a>
+                        </li>
+                        <li class="cn4"><a href="javascript:chgChara(4);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/4.png" alt="レム"></span></a>
+                        </li>
+                        <li class="cn5"><a href="javascript:chgChara(5);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/5.png" alt="ラム"></span></a>
+                        </li>
+                        <li class="cn6"><a href="javascript:chgChara(6);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/6.png"
+                                        alt="ベアトリス"></span></a></li>
+                        <li class="cn7"><a href="javascript:chgChara(7);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/7.png"
+                                        alt="ロズワール・L・メイザース"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/2.png"
+                                    alt="王選・フェルト陣営"></span></li>
+                        <li class="cn8"><a href="javascript:chgChara(8);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/8.png" alt="フェルト"></span></a>
+                        </li>
+                        <li class="cn9"><a href="javascript:chgChara(9);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/9.png"
+                                        alt="ラインハルト・ヴァン・アストレア"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/3.png"
+                                    alt="王選・クルシュ陣営"></span></li>
+                        <li class="cn10"><a href="javascript:chgChara(10);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/10.png"
+                                        alt="クルシュ・カルステン"></span></a></li>
+                        <li class="cn11"><a href="javascript:chgChara(11);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/11.png"
+                                        alt="フェリックス・アーガイル"></span></a></li>
+                        <li class="cn12"><a href="javascript:chgChara(12);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/12.png"
+                                        alt="ヴィルヘルム・ヴァン・アストレア"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/4.png"
+                                    alt="王選・アナスタシア陣営"></span></li>
+                        <li class="cn13"><a href="javascript:chgChara(13);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/13.png"
+                                        alt="アナスタシア・ホーシン"></span></a></li>
+                        <li class="cn14"><a href="javascript:chgChara(14);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/14.png"
+                                        alt="ユリウス・ユークリウス"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/5.png"
+                                    alt="王選・プリシラ陣営"></span></li>
+                        <li class="cn15"><a href="javascript:chgChara(15);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/15.png"
+                                        alt="プリシラ・バーリエル"></span></a></li>
+                        <li class="cn16"><a href="javascript:chgChara(16);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/16.png"
+                                        alt="アルデバラン"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/6.png"
+                                    alt="商人"></span></li>
+                        <li class="cn21"><a href="javascript:chgChara(21);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/21.png"
+                                        alt="オットー・スーウェン"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/7b.png?ret"
+                                    alt="暗殺姉妹"></span></li>
+                        <li class="cn17"><a href="javascript:chgChara(17);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/17.png"
+                                        alt="エルザ・グランヒルテ"></span></a></li>
+                        <li class="brl">&nbsp;</li>
+                        <li class="lbl"><span><img src="img/10.png"
+                                    alt="魔女教"></span></li>
+                        <li class="cn18"><a href="javascript:chgChara(18);"><span><img
+                                        src="http://re-zero-anime.jp/tv/assets/character/n/18.png"
+                                        alt="ペテルギウス・ロマネコンティ"></span></a></li>
+                    </ul>
+                </nav>
+            </aside><!-- /.cont-sub-navi-->
+            <article class="cont-sub-atc lo-cont">
+
+
+                <div id="CharaData" class="cont-character-block">
+                    <section id="C1" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/1.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/1.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">นัตสึกิ สุบารุ</span>
+                            </p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Natsuki Subaru</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ยูสุเกะ โคบายาชิ</span></p>
+                            <p class="text thin-font">
+                                เด็กหนุ่มตัวเอกของเรื่องนี้ เป็นพวกฮิคิโคโมริ (พวกที่ชอบเก็บตัวอยู่กับบ้าน) ที่จู่ ๆ
+                                ก็พบว่าตัวเองมาอยู่ในโลกแฟนตาซีที่มีประเทศชื่อ “ลูกานิก้า”
+                                ที่ไม่รู้จักมาก่อน จนกระทั่งได้พบกับสาวน้อยคนหนึ่งที่ชื่อ “เอมิเลีย”
+                                ซึ่งนั่นคือจุดเริ่มต้นที่ตัวเขาต้องไปเจอกับความตายและการเริ่มต้น ณ
+                                จุดใดจุดหนึ่งอันเป็นความทรงจำครั้งสุดท้ายในโลกที่ไม่รู้จักซ้ำแล้วซ้ำเล่า
+                                เพื่อยุติภาพความตายที่วนลูปไม่สิ้นสุด ไม่ว่าจะของตัวเอง หรือเอมิเลีย
+                                หรือคนอื่นที่มาเกี่ยวข้องกันในจุดบรรจบของเหตุการณ์อันไม่ควรเกิดขึ้น
+                                เขาจึงต้องพยายามรักษาชีวิตของตัวเองให้มุ่งไปสู่เหตุการณ์ที่ควรจะเป็นที่สุด
+                            </p>
+                            <br>
+                            <p class="text thin-font">เป็นคนที่มีนิสัยทะเล้น เข้ากับคนอื่นได้ง่าย
+                                และไม่ชอบการยอมแพ้หรือหันหลังให้กับความผิดพลาดของตัวเอง</p>
+                        </div>
+                    </section>
+
+                    <section id="C2" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/2.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/2.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เอมิเลีย</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Emilia</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ริเอะ ทากาฮาชิ</span></p>
+                            <p class="text thin-font">สาวน้อยผมยาวสีเงินสลวย เธอเป็นผู้ใช้ภูติ ที่เป็นลูกครึ่งเอลฟ์
+                                ในตอนแรกเธอได้ช่วยเหลือสุบารุจากพวกอันธพาลแล้วใช้ชื่อว่า “ซาเทลล่า”
+                                ซึ่งชื่อนี้เป็นชื่อของ “ซาเทลล่า แม่มดแห่งความริษยา”
+                                ที่ใครต่อใครต่างพากันรังเกียจเมื่อได้ยิน
+                                เธอกำลังออกตามหาหัวขโมยล้วงกระเป๋าที่เอาตราสัญลักษณ์ของเธอที่พกเอาไว้ไปต่อหน้าต่อตา
+                                โดยตราสัญลักษณ์ที่ถูกขโมยไปคือ “ตราของผู้ลงสมัครเป็นราชาองค์ต่อไป”
+                                ของอาณาจักรลูกานิก้าจนกระทั่งเธอและสุบารุได้ออกตามหาหัวขโมยรายนี้ไปถึงที่ร้านรับซื้อขายของมีค่าในหมู่บ้านสลัมแห่งหนึ่ง
+                                ก่อนที่จะถูกนักฆ่าสาวที่ชื่อ “เอลซ่า” ฆ่าตาย
+                                ซึ่งภาพการตายของตัวเธอคือจุดเริ่มต้นที่ทำให้สุบารุออกตามหาเธอเพื่อยับยั้งเหตุการณ์ไม่ให้มันต้องเกิดขึ้นอีกครั้ง
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C3" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/3.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/3.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">พัค</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Puck</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ยูมิ อุจิยามะ</span></p>
+                            <p class="text thin-font">แมวตัวผู้พูดได้ เป็นภูติที่โตเต็มวัยประจำตัวของเอมิเลีย
+                                มีนิสัยคล้าย ๆ
+                                กับเด็กผู้ชาย ความคิดความอ่านเหมือนกับมนุษย์ทุกอย่าง มีอายุถึง 420 ปีเลยทีเดียว</p>
+                        </div>
+                    </section>
+
+                    <section id="C4" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/4.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/4.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เร็ม</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Rem</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：อิโนริ มินาเสะ</span></p>
+                            <p class="text thin-font">สาวน้อยผมฟ้าผู้น้องที่เป็นฝาแฝดกับแร็ม
+                                คอยทำงานเป็นแม่บ้านดูแลปราสาทให้กับรอสวาล
+                                มีนิสัยและความคิดความอ่านไม่ต่างจากฝาแฝดคนพี่ แต่เธอจะเก่งด้านงานบ้านงานเรือนมากกว่า
+                                เธอให้ความเคารพนับถือในตัวของพี่สาวเอามากๆ </p>
+                        </div>
+                    </section>
+
+                    <section id="C5" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/5.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/5.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">แร็ม</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Ram</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ริเอะ มุราคาวะ</span></p>
+                            <p class="text thin-font">สาวน้อยผมชมพูที่ผู้พี่เป็นฝาแฝดกับเร็ม
+                                คอยทำงานเป็นแม่บ้านดูแลปราสาทให้กับรอสวาล
+                                เป็นฝาแฝดที่มีทั้งนิสัยและความคิดความอ่านเหมือนกันยังกับพิมพ์สำเนาไม่ผิดเพี้ยน
+                                แต่ข้อต่างของเธอคือ ไม่เก่งเรื่องงานบ้านงานเรือนเท่ากับน้องสาว
+                                เป็นคนที่เคร่งครัดในการปฏิบัติหน้าที่ต่อรอสวาลมาก</p>
+                        </div>
+                    </section>
+
+                    <section id="C6" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/6.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/6.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เบียทริซ</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Beatrice</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ซาโตมิ อาราอิ</span></p>
+                            <p class="text thin-font">สาวน้อยผมทองในชุดโกธิค
+                                เธอเป็นภูตที่ทำหน้าที่เป็นบรรณารักษ์
+                                มีหน้าที่ดูแลสมุดในห้องสมุดต้องห้ามภายในปราสาทของรอสวาล
+                                เธอไม่ชอบให้ใครมาแหย่เธอว่าเป็นเด็ก เธอชื่นชอบพัคภูติประจำตัวของเอมิเลียอย่างมากมาย
+                                และถูกสุบารุเรียกว่า “เบียโกะ”
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C7" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/7.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/7.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld ls-minus005">รอสวาล แอล
+                                    เมเทอร์ส</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Roswaal L Mathers</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：โคยาสุ ทาเคฮิโตะ</span></p>
+                            <p class="text thin-font">ชายผู้เป็นข้าหลวงของอาณาจักรลูกานิก้า
+                                ที่ให้ที่พักอยู่ที่ปราสาทกับสุบารุและเอมิเลีย
+                                ทั้งยังทำหน้าที่ในการคัดเลือกผู้ที่จะเข้ามาเป็นราชาของอาณาจักรทั้ง 5 คน
+                                ซึ่งหนึ่งในก็คือเอมิเลียด้วยเช่นกัน</p>
+                        </div>
+                    </section>
+
+                    <section id="C8" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/8.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/8.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เฟลต์</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Felt</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ชินัตสึ อาคาซากิ</span></p>
+                            <p class="text thin-font">สาวน้อยผมบลอนด์ตัวเล็ก
+                                ในตอนแรกเธอได้ขโมยเอาตราประจำตัวของของเอมิเลียไป เพื่อเอาไปขายให้กับผู้ว่าจ้างงานกับเธอ
+                                ซึ่งกลายเป็นว่าเธอได้พาตัวเองไปพบกับเหตุการณ์และปัญหาใหญ่เกินกว่าที่ตัวเองจะเข้าใจมันได้
+                            </p>
+                            <br>
+                            <p class="text thin-font">เธอเป็นเด็กสาวที่อยู่เพียงลำพังคนเดียวในหมู่บ้านสลัม
+                                เธอพยายามทุกอย่างเพื่อที่จะหลุดพ้นออกไปให้ได้ ซึ่งสถานที่แห่งนี้มีเธอมีเพียงแค่ “รอม”
+                                คุณปู่เจ้าของร้านรับซื้อขายของมีค่าเท่านั้นที่คอยเป็นครอบครัวที่ไว้ใจมากที่สุดคนเดียวของตัวเธอ
+                                ทว่าแท้จริงแล้วตัวเธอมีความลับบางอย่างที่เกี่ยวข้องกับชาติกำเนิดของตัวเองอันเป็นเบื้องหลังที่ดำมืดที่ยังไม่รู้
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C9" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/9.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/9.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-22 font-14-sm font-bld ls-minus005">ไรน์ฮาร์ด
+                                    แวน แอสเตรีย</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Reinhard Van Astrea</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：นากามูระ ยูอิจิ</span></p>
+                            <p class="text thin-font">
+                                ชายหนุ่มผมแดง เขาเป็นอัศวินของอาณาจักรลูกานิก้า ผู้ได้ฉายาว่า “ปรมาจารย์แห่งวิชาดาบ”
+                                เป็นคนจากตระกูลที่มีชื่อเสียง ทั้งยังสุภาพบุรุษหนุ่มที่รักความยุติธรรม ซื่อตรง
+                                อัธยาศัยดีอย่างเป็นมิตร มีวิชาดาบที่ร้ายกาจอย่างมาก</p>
+                        </div>
+                    </section>
+
+                    <section id="C10" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/10.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/10.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">ครุชช์
+                                    คาร์สเทิร์น</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Crusch Karsten</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ยูกะ อิกุจิ</span></p>
+                            <p class="text thin-font">หญิงสาวหนึ่งใน 5
+                                ของผู้สมัครท้าชิงตำแหน่งราชาอาณาจักรมังกรลูกานิก้าองค์ต่อไป มีนิสัยเย็นชา
+                                และห้าวหาญดุจอัศวิน หากได้เป็นกษัตริย์จะทำให้มังกรลืมข้อตกลงที่เคยมั่นสัญญาไว้
+                                เพราะคิดว่าอาณาจักรมังกรแห่งลูกุนิก้าไม่ได้ขึ้นตรงกับมังกร</p>
+                        </div>
+                    </section>
+
+                    <section id="C11" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/11.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/11.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เฟลิคซ์ อาร์ไคล์</span>
+                            </p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Felix Argyle</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ยูอิ โฮริเอะ</span></p>
+                            <p class="text thin-font">ผู้ติดตามและอัศวินประจำตัวของครุชช์
+                                ถึงแม้ดูภายนอกเธอจะเหมือนกับเป็นน้องเหมียวหญิงน้อยน่ารัก
+                                แต่แท้ที่จริงแล้วเธอเป็นผู้ชาย!!! เฟลิคซ์มีความชำนาญในด้านการรักษาเกท (พลังเวทย์)
+                                โดยเธอถูกเอมิเลียขอร้องให้ช่วยรักษาสุบารุ
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C12" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/12.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/12.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-22 font-14-sm font-bld ls-minus005">วิลเฮิล์ม
+                                    แวน แอสเตรีย</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Wilhelm Van Astrea</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：โฮริอุจิ เคนยู</span></p>
+                            <p class="text thin-font">พ่อบ้านประจำตระกูลคาร์สเทิร์น ถึงภายนอกจะดูเป็นพ่อบ้านที่เงียบขรึม
+                                แต่แท้จริงแล้วเป็นนักฆ่ามือดีคนหนึ่งเลย
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C13" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/13.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/13.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">อนาสตาเซีย โฮชิน</span>
+                            </p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Anastasia Hoshin</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：คานะ อุเอดะ</span></p>
+                            <p class="text thin-font">หนึ่งใน 5
+                                ของผู้สมัครท้าชิงตำแหน่งราชาอาณาจักรมังกรลูกานิก้าองค์ต่อไป
+                                เป็นลูกคุณหนูที่ละโมบต้องการทุกสรรพสิ่ง ไม่มีการพาณิชย์ใดที่ทำให้พอใจได้
+                                เลยต้องการจะได้อาณาจักรมังกรลูกุนิก้ามาไว้ในครอบครอง
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C14" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/14.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/14.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">ยูลิอุส ยูคริอุส</span>
+                            </p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Julius Juukulius</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ทาคูยะ เองูจิ</span></p>
+                            <p class="text thin-font">ผู้ติดตามและอัศวินประจำตัวของอนาสตาเซีย
+                                ยูลิอุสเป็นอัศวินที่เชื่อมั่นในเกียรติและศักดิ์ศรีของอัศวิน
+                                ไม่ยอมให้ใครมาหยามเกียรติได้ง่ายๆ
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C15" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/15.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/15.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">พริสซิลล่า
+                                    บาเรียล</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Priscilla Barielle</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：ยูคาริ ทามูระ</span></p>
+                            <p class="text thin-font">หญิงสาวจากตระกูลที่สูงศักดิ์อย่างบาเรียล เธอเป็นหนึ่งใน 5
+                                ของผู้สมัครท้าชิงตำแหน่งราชาอาณาจักรมังกรลูกานิก้าองค์ต่อไป
+                                เธอมีนิสัยเป็นคุณหนูที่หยิ่งยโส ถือตัวเองเป็นที่ใหญ่ และเธอเชื่อว่าทุก ๆ
+                                อย่างบนโลกนี้ล้วนแล้วแต่หมุนรอบตัวเธอเอง</p>
+                        </div>
+                    </section>
+
+                    <section id="C16" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/16.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/16.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">อัลเดบาราน</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Aldebaran</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：เคจิ ฟุจิวาระ</span></p>
+                            <p class="text thin-font">
+                                ผู้ติดตามและอัศวินประจำตัวของพริสซิลล่า
+                                ถึงจะอยู่ภายใต้หมวกอัศวินแต่ก็เป็นคนที่ผู้มากอยู่เหมือนกัน</p>
+                        </div>
+                    </section>
+
+                    <section id="C17" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/17.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/17.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld">เอลซ่า แกรนไฮร์ท</span>
+                            </p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Elsa Grandhirte</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：มามิโกะ โนโตะ</span></p>
+                            <p class="text thin-font">สาวสวยในชุดดำ
+                                ที่ในตอนแรกเป็นผู้จ้างวานให้เฟลท์ไปขโมยเอาตราของเอมิเลีย
+                                ซึ่งแท้จริงนั้นเธอได้ชื่อว่าเป็นนักฆ่าที่เลือดเย็นที่สุด
+                                ที่ชื่นชอบการสังหารเหยื่อจากการต่อสู้อย่างทารุณ โดยการเล่นงานที่หน้าท้อง จนได้ชื่อว่า
+                                “จอมคว้านท้อง” มีทักษะการต่อสู้ที่น่ากลัวและอันตรายอย่างมาก ใช้ขวานสั้นคู่เป็นอาวุธ
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="C18" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/18.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/18.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld ls-minus005">เพเทลกีอุส
+                                    โรมานีคอนติ</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Petelgeuse Romaneeconti</span>
+                            </p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：โยชิทสึงุ มัตซึโอกะ</span></p>
+                            <p class="text thin-font">หนึ่งในบาทหลวงแห่งบาปซึ่งเป็นผู้บริหารลัทธิแม่มด ในฐานะ
+                                "ความเกียจคร้าน" จุดประสงค์สูงสุดคือการติดตาม "แม่มดแห่งความริสยา" และตอบแทนความรักของเธอ
+                                เป็นคนที่มีความเชื่อว่าการขยันเป็นคุณธรรมและการเกียจคร้านเป็นสิ่งที่ไม่ดี</p>
+                        </div>
+                    </section>
+
+                    <section id="C21" class="character-block">
+                        <div class="col-c"><span><img src="http://re-zero-anime.jp/tv/assets/character/c/21.png"></span>
+                        </div>
+                        <div class="col-f"><span><img src="http://re-zero-anime.jp/tv/assets/character/f/21.png"></span>
+                        </div>
+                        <div class="col-prof">
+                            <p class="name"><span class="font-24 font-14-sm font-bld ls-minus005">ออตโต
+                                    ซูเวน</span></p>
+                            <p class="name-e"><span class="font-12 font-10-sm font-bld">Otto Suwen</span></p>
+                            <p class="cv"><span class="font-14 font-12-sm">CV：โคเฮย์ อามาซากิ</span></p>
+                            <p class="text thin-font">
+                                ชายหนุ่มที่ได้รับ "พรแห่งคำพูดและวิญญาณ"
+                                ที่ทำให้เขาสามารถพูดคุยกับสิ่งมีชีวิตใด ๆ ก็ได้ และมีไหวพริบ
+                                เขาเป็นพ่อค้าเดินทางและแม้ว่าเขาจะมีพรสวรรค์ในฐานะพ่อค้า แต่เขาก็โชคร้าย
+                                ความทุกข์ทรมานของเขาเริ่มต้นขึ้นเมื่อจู่ ๆ เขาเข้ามาเกี่ยวพันกับเหตุการณ์ของสุบารุ
+                            </p>
+                        </div>
+                    </section>
+
+                </div><!-- /.cont-character-block-->
+
+
+
+
+
+
+
+            </article><!-- /.cont-sub-atc-->
+        </div><!-- /.part-body-middle-->
+    </div><!-- /.part-body -->
+    <div class="part-modal-data" id="Modal_data">
+    </div><!-- /.part-modal-data -->
+</body>
+
+</html>
